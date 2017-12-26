@@ -1,6 +1,4 @@
 .Employees {
-	border-color: black;
-	border-style: solid;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 	width: auto;
@@ -8,7 +6,6 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
-
 h1 {
 	text-align: left;
 	color: #4d4d4d;
@@ -16,15 +13,15 @@ h1 {
 	margin-bottom: 30px;
 	margin-top: 10px;
 	position: relative;
-	left: 2.5%;
+	left: 4%;
 	}
-
-	p h2 {
-		text-align: center;
+p{
+		font-family: sans-serif;
+		text-align: left;
 		font-size: 0.75em;
-		float: right;
+		color: #333;
 	}
-	.pic {
+.pic {
 		border-style:solid;
 		border-color:lightblue;
 		border-width: 1px;
@@ -35,10 +32,15 @@ h1 {
 		float: left;
 		margin-right: 10px;
 		margin-top: 10px;
+		margin-left: 15px;
+		background-image: url("Tomas.jpg");
+		background-size: cover;
 	}
-	.Employee {
+.Employee {
 		margin-top: 12.5px;
 		margin-bottom: 12.5px;
+		margin-left: 20px;
+		margin-right: 20px;
 		border-color: lightgrey;
 		border-width: 1px;
 		border-radius: 10px;
