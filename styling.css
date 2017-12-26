@@ -1,21 +1,48 @@
 .Employees {
+	border-color: black;
 	border-style: solid;
-	width: 100%;
-	border-color: red;
-	border-width: 5px;
-	border-radius: 10px;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	width: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 h1 {
-	text-align: center;
-	font-size: 100px;
-	margin-bottom: 10px;
+	text-align: left;
+	color: #4d4d4d;
+	font-size: 1.25em;
+	margin-bottom: 30px;
 	margin-top: 10px;
+	position: relative;
+	left: 2.5%;
 	}
 
-	p {
+	p h2 {
 		text-align: center;
-		font-size: 50px;
-		padding-bottom: 1px;
-		margin-bottom: 10px;
+		font-size: 0.75em;
+		float: right;
+	}
+	.pic {
+		border-style:solid;
+		border-color:lightblue;
+		border-width: 1px;
+		padding-bottom: 5px;
+		height: 80%;
+		width: 40%;
+		border-radius: 50%;
+		float: left;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	.Employee {
+		margin-top: 12.5px;
+		margin-bottom: 12.5px;
+		border-color: lightgrey;
+		border-width: 1px;
+		border-radius: 10px;
+		border-style:solid;
+		height: 200px;
+		width: 400px;
 	}
