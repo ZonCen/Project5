@@ -1,11 +1,7 @@
-const $Employees = $(".Employee");
-$Employees.hide();
-
 $.ajax({
-	url: 'https://randomuser.me/api/?inc=email,name,location&results=12&nat=us',
+	url: 'https://randomuser.me/api/?inc=email,name,location,picture&results=12&nat=us',
 	dataType: "json",
 	success: function(data) {
-		console.log(data.results)
 	$.each(data.results, function(i, user) {
 		let div = "<div class='Employee'>";
 		div += "<div class='pic'></div>"
@@ -19,7 +15,8 @@ $.ajax({
 					  + "</p>";
 		div += "</div>";
 		$(".Employees").append(div);
-	})
-	}
+		$(".Employee:last-child .pic").css("background-image", "url("+user.picture.large+")");
+	});//End of each
+	} //End of sucess
 	
-})
+}) //End of ajax
