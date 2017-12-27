@@ -48,3 +48,12 @@ p{
 		height: 200px;
 		width: 400px;
 	}
+	
+.modal {
+	border-color: red;
+	border-top-style: solid;
+	height: 200px;
+	width: 180px;
+	float: right;
+	margin-right: 20px;
+}
