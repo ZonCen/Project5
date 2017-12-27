@@ -1,3 +1,7 @@
+let employees = [];
+
+
+
 function formatBoD (Bod) {
 	const date = new Date(Bod);
 	const year = date.getYear();
@@ -5,6 +9,10 @@ function formatBoD (Bod) {
 	const day = date.getDate();
 	return month + "/" + day + "/" + year;
 } //End of formatBoD
+
+function bigLetter(word) {
+	return word.charAt(0).toUpperCase() + word.slice(1);
+}
 
 $.ajax({
 	url: 'https://randomuser.me/api/?inc=email,name,location,picture,login,cell,dob&results=12&nat=us',
@@ -36,6 +44,20 @@ $.ajax({
 		$(".Employees").append(div);
 		$(".Employee:last-child .pic").css("background-image", "url("+user.picture.large+")");
 		$(".modal").hide();
+		
+		const employee = {
+			fullName : bigLetter(user.name.first) + " " + bigLetter(user.name.last),
+			email: bigLetter(user.email),
+			location : {
+				street: bigLetter(user.location.street),
+				city : bigLetter(user.location.city),
+				state: bigLetter(user.location.state),
+				postcode: user.location.postCode
+			},//End of location
+			birthDay: formatBoD(date),
+			cell: user.cell
+		}//End of employee
+		employees.push(employee);
 	});//End of each
 $(".Employee").on("click", function(e) {
 	$(this).toggleClass("Test");
