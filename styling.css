@@ -6,20 +6,21 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
-h1 {
+h1, h2 {
 	text-align: left;
 	color: #4d4d4d;
 	font-size: 1.25em;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	margin-top: 10px;
 	position: relative;
 	left: 4%;
 	}
+
 p{
 		font-family: sans-serif;
 		text-align: left;
-		font-size: 0.75em;
-		color: #333;
+		font-size: 0.6em;
+		color: lightgrey;
 	}
 .pic {
 		border-style:solid;
