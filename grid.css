@@ -1,3 +1,7 @@
+/* ================================= 
+  Grid element style
+==================================== */
+
 .grid {
 	max-width: 1400px;
 	margin: 25px auto;
@@ -11,6 +15,9 @@
 	grid-template-columns: 1fr 2fr;
 }
 
+/* ================================= 
+  Flex element style
+==================================== */
 .modal-content {
 	display: flex;
 	flex-direction: column;
@@ -20,12 +27,6 @@
 	text-align: center;
 }
 
-.close {
-	align-self: right;
-}
 
-.close:hover {
-	cursor: context-menu;
-}
 
 
