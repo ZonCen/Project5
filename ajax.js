@@ -1,20 +1,9 @@
+/* ================================= 
+  Getting data from API to the Employees and add it to the site.
+==================================== */
 let employees = [];
 
-
-
-function formatBoD (Bod) {
-	const date = new Date(Bod);
-	const year = date.getYear();
-	const month = date.getMonth();
-	const day = date.getDate();
-	return month + "/" + day + "/" + year;
-} //End of formatBoD
-
-function bigLetter(word) {
-	return word.charAt(0).toUpperCase() + word.slice(1);
-}
-
-$.ajax({
+$.ajax({ //Get the data from the API and adds it to the Employees.
 	url: 'https://randomuser.me/api/?inc=email,name,location,picture,login,cell,dob&results=12&nat=us',
 	dataType: "json",
 	success: function(data) {
@@ -35,11 +24,11 @@ $.ajax({
 		}//End of employee
 		employees.push(employee);
 	});//End of each
-	addEmployee();
+	addEmployee(); //Adds the above employee to the grid div.
 	} //End of sucess
 }) //End of ajax
 
-function addEmployee() {
+function addEmployee() { //Adds an employee to the grid div in index.html
 	$.each(employees, function(i, employee){
 		let div = "<div class='Employee' id='" + i + "'>";
 		div += "<div class='pic'></div>"
@@ -55,12 +44,15 @@ function addEmployee() {
 		}) // End of Each
 	$(".Employee").on("click", function(e) {
 		id = $(this).attr("id");
-		modal(id);
-	
+		modal(id); //Shows the modal information.	
 	}) //End of click
 } //End of function
 
-function modal(i) {
+/* ================================= 
+  Add information from the Employees and display it in the Modal.
+==================================== */
+
+function modal(i) { //When passed a number this will show the modal for that Employee
 	let employee = employees[i];
 	let div = "<div class='modal-content' id='" + i + "'>";
 	let picture = employee.picture;
@@ -89,5 +81,22 @@ function modal(i) {
 $(".close").click(function() {
 	$(".modal").css("display", "none");
 	$(".modal-content").remove()
-})
+}) //end of click
+} //End of function
+
+
+/* ================================= 
+  Change the appearance of words and date of birth.
+==================================== */
+
+function bigLetter(word) { //Makes the first letter in a word big and returns the full word with a big first letter.
+	return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
+function formatBoD (Bod) { //Change how the birth of date are shown.
+	const date = new Date(Bod);
+	const year = date.getYear();
+	const month = date.getMonth();
+	const day = date.getDate();
+	return month + "/" + day + "/" + year;
+} //End of formatBoD

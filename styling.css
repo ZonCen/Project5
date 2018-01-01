@@ -1,3 +1,7 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
 body {
 	background-color: #f9f9f9;
 }
@@ -12,30 +16,13 @@ h1 {
 	
 p {
 	font-size: 0.6em;
-	color: #7c7f7c;	
-		
+	color: #7c7f7c;		
 }
 
-ul {
-	list-style-type: none;
-	
-}
+/* ================================= 
+  Employee element style
+==================================== */
 
-hr {
-	
-}
-.pic {
-		padding-bottom: 5px;
-		height: 100px;
-		width: 100px;
-		border-radius: 50%;
-		margin-right: 10px;
-		margin-top: 10px;
-		margin-left: 15px;
-		margin-bottom: 10px;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
 .Employee {
 		border-width: 1px;
 		border-radius: 10px;
@@ -58,6 +45,11 @@ hr {
 	text-align: left;
 }
 
+
+/* ================================= 
+  Modal element style
+==================================== */
+
 .modal {
     display: none;
     position: fixed;
@@ -79,9 +71,30 @@ hr {
     height: auto;
 }
 
+
+/* ================================= 
+  Misc element style
+==================================== */
 .close {
 	font-size: 20px;
 	margin-right: 10px;
+	align-self: right;
 }
 
-	
+.close:hover { 
+	cursor: context-menu; /*I choice this so the hover does not changes to an I when the mouse hover over this element. This way it always stays as an arrow*/
+}
+.pic {
+		padding-bottom: 5px;
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		margin-right: 10px;
+		margin-top: 10px;
+		margin-left: 15px;
+		margin-bottom: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+}
+
+
