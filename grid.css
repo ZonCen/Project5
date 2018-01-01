@@ -1,0 +1,31 @@
+.grid {
+	max-width: 1400px;
+	margin: 25px auto;
+	display: grid;
+	grid-template-columns: repeat(3,minmax(400px, 1fr));
+	grid-gap: 15px;
+}
+
+.Employee {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.close {
+	align-self: right;
+}
+
+.close:hover {
+	cursor: context-menu;
+}
+
+
